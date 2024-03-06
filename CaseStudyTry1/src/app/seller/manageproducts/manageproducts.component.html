@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Product List</title>
+</head>
+<app-sellernav></app-sellernav>
+<body>
+
+<div class="container mt-5">
+    <h2>Product List</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity In Stock</th>
+                <th scope="col">Category Id</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let product of srv.prodlist">
+                <th scope="row">{{ product.ProductId }}</th>
+                <td>{{ product.ProductName }}</td>
+                <td>{{ product.Description }}</td>
+                <td>{{ product.Price}}</td>
+                <td>{{ product.QuantityInStock }}</td>
+                <td>{{ product.CategoryId }}</td>
+                <td><button class="btn btn-warning" (click)="fillform(product)">Update</button></td>
+                <td><button class="btn btn-danger" (click)="deleteProduct(product.ProductId)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+
