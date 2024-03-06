@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebApiDBFirstCaseStudyTRY1.props" />
+</Project>

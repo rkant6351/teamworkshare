@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\WebApiDBFirstCaseStudyTRY1.props" />
+</Project>
